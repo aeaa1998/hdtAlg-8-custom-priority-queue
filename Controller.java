@@ -28,11 +28,12 @@ public class Controller {
                 case 1:
                     View.getView().print("El paciente que va a pasar ahorita es:");
                     View.getView().print(heap.poll().toString());
-                    View.getView().print("El paciente que le toca pasar luego es:");
-                    View.getView().print(heap.peek().toString());
                     if (heap.isEmpty()) {
                         View.getView().print("Ya no hay mas pacientes:");
                         t = false;
+                    }else{
+                        View.getView().print("El paciente que le toca pasar luego es:");
+                        View.getView().print(heap.peek().toString());
                     }
                     break;
                 default:
