@@ -18,7 +18,7 @@ public class Controller {
     public void init(){
         fillPool();
         heap = new VectorHeap<>(new Vector<Patient>(){{addAll(patients);}});
-        var t = true;
+        boolean t = true;
         while (t){
             switch (View.getView().selectOptions(options, "Escoja el numero de una de las opciones", "Escoja una opcion valida")){
                 case 0:
