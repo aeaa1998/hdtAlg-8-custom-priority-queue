@@ -14,7 +14,17 @@ public class Controller {
     }};
     private ArrayList<Patient> patients = new ArrayList<>();
     private VectorHeap<Patient> heap;
+    public void setHeap(VectorHeap<Patient> heap) {
+        this.heap = heap;
+    }
 
+    public ArrayList<Patient> getPatients() {
+        return patients;
+    }
+
+    public VectorHeap<Patient> getHeap() {
+        return heap;
+    }
     public void init(){
         fillPool();
         heap = new VectorHeap<>(new Vector<Patient>(){{addAll(patients);}});
